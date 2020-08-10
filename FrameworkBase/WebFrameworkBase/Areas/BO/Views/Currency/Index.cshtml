@@ -1,0 +1,56 @@
+﻿@model WebFrameworkBase.Areas.BO.Models.CurrencyListViewModel
+@{
+    ViewData["Title"] = "Currency List";
+}
+
+<form asp-controller="Currency" asp-action="Index" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#content_all" data-ajax-begin="showWaitingScreen(true);" data-ajax-complete="showWaitingScreen(false);" data-ajax-failure="location.reload();">
+    <div id="content_all">
+
+        <h2>@ViewData["Title"].</h2>
+        <h3>@ViewData["Message"]</h3>
+
+        <div class="row">
+            <div class="col">
+                <a asp-controller="Currency" asp-action="RetrieveCurrencies" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="@ViewBag.RetrieveCurrenciesTooltip"><llv>Retrieve Currencies</llv></a>
+            </div>
+        </div>
+        <hr />
+        @if (Model.CurrencyList.Count() > 0)
+        {
+            @await Html.PartialAsync("~/Views/Shared/NavigationListPartialView.cshtml")
+
+            <table class="table table-condensed table-hover table-bordered table-striped table-dark table-sm">
+                <thead class="bg-primary">
+                    <tr>
+                        <th><span class="oi oi-cog d-block text-center align-middle" title="icon cog" aria-hidden="true"></span></th>
+                        <th scope="col">@Html.DisplayNameFor(m => m.CurrencyList[0].CurrencyId)</th>
+                        <th scope="col">@Html.DisplayNameFor(m => m.CurrencyList[0].CurrencyName)</th>
+                        <th scope="col">@Html.DisplayNameFor(m => m.CurrencyList[0].CurrencyCode)</th>
+                        <th scope="col">@Html.DisplayNameFor(m => m.CurrencyList[0].CurrencySymbol)</th>
+                        <th scope="col">@Html.DisplayNameFor(m => m.CurrencyList[0].CurrencyNativeSymbol)</th>
+                        <th scope="col">@Html.DisplayNameFor(m => m.CurrencyList[0].CurrencyDecimalDigits)</th>
+                        <th scope="col">@Html.DisplayNameFor(m => m.CurrencyList[0].CurrencyRounding)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < Model.CurrencyList.Count(); i++)
+                    {
+                        <tr>
+                            <td align="center">
+                                <a class="btn btn-primary btn-sm"><span class="oi oi-pencil" title="icon pencil" aria-hidden="true"></span></a>
+                                <a class="btn btn-danger btn-sm"><span class="oi oi-trash" title="icon trash" aria-hidden="true"></span></a>
+                            </td>
+                            <td>@Html.DisplayTextFor(m => m.CurrencyList[i].CurrencyId)</td>
+                            <td>@Html.DisplayTextFor(m => m.CurrencyList[i].CurrencyName)</td>
+                            <td>@Html.DisplayTextFor(m => m.CurrencyList[i].CurrencyCode)</td>
+                            <td>@Html.DisplayTextFor(m => m.CurrencyList[i].CurrencySymbol)</td>
+                            <td>@Html.DisplayTextFor(m => m.CurrencyList[i].CurrencyNativeSymbol)</td>
+                            <td>@Html.DisplayTextFor(m => m.CurrencyList[i].CurrencyDecimalDigits)</td>
+                            <td>@Html.DisplayTextFor(m => m.CurrencyList[i].CurrencyRounding)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</form>

@@ -1,0 +1,58 @@
+version: '3.4'
+
+services:
+
+  sql:
+    image: ${DOCKER_REGISTRY-}sql
+    build:
+      context: ./OtherDockerFiles
+      dockerfile: DockerFile.DB
+    container_name: sqldocker
+    ports:
+      - "4433:4433"
+    hostname: sqldocker
+    environment:
+      SA_PASSWORD: "12345a#1!"
+      ACCEPT_EULA: "Y"   
+      MSSQL_PID: Express 
+      # Developer / Express / Standard / Enterprise  / EnterpriseCore 
+    #healthcheck:
+      #test: sqlcmd -S db1.internal.prod.example.com -U SA -P 'Alaska2017' -Q 'select distinct 1 from AdventureWorksDW2017.dbo.DimDate'
+    networks:
+      mynetwork:
+        aliases:
+          - sqldocker
+
+  rabbitmq:
+    image: ${DOCKER_REGISTRY-}rabbitmq
+    build:
+      context: ./OtherDockerFiles
+      dockerfile: Dockerfile.RMQ
+    container_name: rabbitbqdocker
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    hostname: rabbitbqdocker
+    networks:
+      mynetwork:
+        aliases:
+          - rabbitbqdocker
+
+  webframeworkbase:
+    image: ${DOCKER_REGISTRY-}webframeworkbase
+    build:
+      context: ./FrameworkBase/WebFrameworkBase
+      dockerfile: Dockerfile
+    container_name: webdocker
+    ports:
+      - "5180:80"
+      - "5443:443"
+    hostname: webdocker
+    networks:
+      mynetwork:
+        aliases:
+          - webdocker
+
+networks:
+  mynetwork:
+    driver: bridge

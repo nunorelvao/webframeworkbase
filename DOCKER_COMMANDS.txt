@@ -1,0 +1,8 @@
+install docker and docker-compose
+clone this repository
+run docker-compose build db to build db container
+run docker-compose up -d db to run SQL Server container in detached mode in the background
+run docker-compose run db sqlcmd -S db1.internal.prod.example.com -U SA -P 'Alaska2017' -Q "RESTORE FILELISTONLY FROM DISK = N'/var/opt/mssql/backup/AdventureWorksDW2017.bak'" to verify database file names before restore,
+run docker-compose run db sqlcmd -S db1.internal.prod.example.com -U SA -P 'Alaska2017' -Q "RESTORE DATABASE AdventureWorksDW2017 FROM DISK = N'/var/opt/mssql/backup/AdventureWorksDW2017.bak' WITH MOVE 'AdventureWorksDW2017' TO '/var/opt/mssql/data/AdventureWorksDW2017.mdf', MOVE 'AdventureWorksDW2017_log' TO '/var/opt/mssql/data/AdventureWorksDW2017_log.ldf' " to restore AdventureWorksDW2017 database on SQL Server
+run docker-compose run web python3 manage.py migrate to apply migrations on default database. In this case it will be AdventureWorksDW2017.
+run docker-compose run web python3 manage.py createsuperuser to create admin account

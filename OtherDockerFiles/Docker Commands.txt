@@ -1,0 +1,1 @@
+ docker run -d -it --rm --hostname rabbitmq --name rabbitmq -p 5672:5762 -p 8081:15672 rabbitmq:3-management

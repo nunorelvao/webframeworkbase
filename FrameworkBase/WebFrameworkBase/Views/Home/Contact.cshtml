@@ -1,0 +1,46 @@
+﻿@model WebFrameworkBase.Models.HomeModels.ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+<h2>@ViewData["Title"].</h2>
+<h3>@ViewData["Message"]</h3>
+
+<address>
+    One Microsoft Way<br />
+    Redmond, WA 98052-6399<br />
+    <abbr title="Phone">P:</abbr>
+    425.555.0100
+</address>
+
+<address>
+    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>
+
+<form asp-controller="Home" asp-action="contactsend"  method="post" class="form-horizontal">
+
+    <div class="container-fluid">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="EmailTo" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EmailTo" class="form-control" />
+                <span asp-validation-for="EmailTo" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="BodyText" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <textarea asp-for="BodyText" class="form-control"></textarea>
+                <span asp-validation-for="BodyText" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" class="btn btn-primary">Send Mail</button>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,15 @@
+﻿+------------------------+-----------------------------+
+|      AjaxOptions       |       HTML attribute        |
++------------------------+-----------------------------+
+| Confirm                | data-ajax-confirm           |
+| HttpMethod             | data-ajax-method            |
+| InsertionMode          | data-ajax-mode              |
+| LoadingElementDuration | data-ajax-loading-duration  |
+| LoadingElementId       | data-ajax-loading           |
+| OnBegin                | data-ajax-begin             |
+| OnComplete             | data-ajax-complete          |
+| OnFailure              | data-ajax-failure           |
+| OnSuccess              | data-ajax-success           |
+| UpdateTargetId         | data-ajax-update            |
+| Url                    | data-ajax-url               |
++------------------------+-----------------------------+

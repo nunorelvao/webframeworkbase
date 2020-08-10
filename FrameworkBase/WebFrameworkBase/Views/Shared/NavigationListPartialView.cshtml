@@ -1,0 +1,44 @@
+﻿<nav aria-label="Page navigation">
+    <ul class="pagination font-weight-bold justify-content-center flex-wrap">
+
+        @if (@Model.PageIndex > Model.PageSize)
+        {
+            <li class="page-item "><button class="page-link bg-dark text-info" asp-action="Index" name="page" value="@(Model.PageIndex-Model.PageSize)">-@Model.PageSize</button></li>
+        }
+
+        @if (Model.HasPreviousPage)
+        {
+            <li class="page-item"><button type="submit" class="page-link bg-dark " name="page" value="@(Model.PageIndex -1)"><<</button></li>
+        }
+        else
+        {
+            <li class="page-item"><button type="submit" class="page-link bg-dark disabled text-secondary" onclick="return false;"><span class="oi oi-media-skip-backward"></span></button></li>
+        }
+
+        @for (int i = (@Model.PageIndex > 5 ? @Model.PageIndex - 5 : 1); i < ((@Model.PageIndex + 6) < Model.TotalPages ? (@Model.PageIndex + 6) : Model.TotalPages + 1); i++)
+        {
+            if (i == @Model.PageIndex)
+            {
+                <li class="page-item "><button type="submit" class="page-link bg-dark text-danger font-weight-bold" name="page" value="@i">@i</button></li>
+            }
+            else
+            {
+                <li class="page-item"><button type="submit" class="page-link bg-dark" name="page" value="@i" >@i</button></li>
+            }
+        }
+
+        @if (Model.HasNextPage)
+        {
+            <li class="page-item"><button type="submit" class="page-link bg-dark" name="page" value="@(Model.PageIndex +1)">>></button></li>
+        }
+        else
+        {
+            <li class="page-item"><button type="submit" class="page-link bg-dark disabled text-secondary" onclick="return false;"><span class="oi oi-media-skip-forward"></span></button></li>
+        }
+
+        @if ((@Model.PageIndex + Model.PageSize) < Model.TotalPages)
+        {
+            <li class="page-item "><button type="submit" class="page-link bg-dark text-info" name="page" value="@(Model.PageIndex+Model.PageSize)">+@Model.PageSize</button></li>
+        }
+    </ul>
+</nav>

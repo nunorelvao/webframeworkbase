@@ -1,0 +1,152 @@
+/* ########################################## */
+/*  LAYOUT START */
+/* ########################################## */
+html, body {
+  font-size: 1em;
+  font-family: monospace,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  height: 100%;
+  min-height: 100%; }
+
+.main-body {
+  width: 90%;
+  opacity: 1;
+  color: #fff;
+  -webkit-box-shadow: 1px 1px 100px 10px #111;
+     -moz-box-shadow: 1px 1px 100px 10px #111;
+          box-shadow: 1px 1px 100px 10px #111;
+  height: auto;
+  min-height: 100%;
+  margin: auto;
+  padding: 0; }
+
+#centeredLoginContent {
+  width: 500px;
+  height: 250px;
+  background-color: #3366ff;
+  border: 1px solid #99b3ff;
+  opacity: 1;
+  margin: auto;
+  top: 30%;
+  position: relative;
+  -webkit-box-shadow: 0 0 10px 1px #99b3ff;
+     -moz-box-shadow: 0 0 10px 1px #99b3ff;
+          box-shadow: 0 0 10px 1px #99b3ff; }
+
+#centeredLoginContent ul {
+  list-style-type: none;
+  text-decoration: none; }
+
+#centeredLoginContent ul li {
+  min-width: 90px;
+  height: 27px;
+  text-shadow: 1px 1px 5px #99b3ff;
+  background-color: #3366ff;
+  color: #fff;
+  display: inline-block; }
+
+.clear {
+  clear: both; }
+
+.trasnparent-input-normal {
+  width: 90%;
+  border: 1px solid #fff;
+  background-color: transparent;
+  height: 40px;
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 5px #000;
+  text-indent: 10px;
+  text-overflow: ellipsis;
+  -webkit-box-shadow: 0 0 10px 1px #99b3ff;
+     -moz-box-shadow: 0 0 10px 1px #99b3ff;
+          box-shadow: 0 0 10px 1px #99b3ff;
+  cursor: pointer; }
+
+.trasnparent-input-normal:focus {
+  color: #fff;
+  text-shadow: 1px 1px 5px #444; }
+
+.trasnparent-button-50x30 {
+  margin: 20px 40px;
+  float: left;
+  text-shadow: 1px 1px 5px #000;
+  -webkit-box-shadow: 0 0 10px 1px #99b3ff;
+     -moz-box-shadow: 0 0 10px 1px #99b3ff;
+          box-shadow: 0 0 10px 1px #99b3ff;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+  background: none;
+  color: #fff;
+  cursor: pointer; }
+
+.trasnparent-button-50x30:hover, .trasnparent-input-normal:hover {
+  -webkit-box-shadow: 0 0 20px 1px #99b3ff;
+     -moz-box-shadow: 0 0 20px 1px #99b3ff;
+          box-shadow: 0 0 20px 1px #99b3ff; }
+
+.trasnparent-button-50x30:active {
+  background-color: #fff;
+  border: 1px solid #3366ff;
+  color: #3366ff;
+  -webkit-box-shadow: 0 0 20px 1px #3366ff;
+     -moz-box-shadow: 0 0 20px 1px #3366ff;
+          box-shadow: 0 0 20px 1px #3366ff; }
+
+.error-message {
+  padding-top: 9px;
+  color: #ff0000;
+  text-shadow: 1px 1px 5px #000; }
+
+/* Carousel */
+.carousel-caption p {
+  font-size: 20px;
+  line-height: 1.4; }
+
+/* buttons and links extension to use brackets: [ click me ] */
+.btn-bracketed::before {
+  display: inline-block;
+  content: "[";
+  padding-right: 0.5em; }
+
+.btn-bracketed::after {
+  display: inline-block;
+  content: "]";
+  padding-left: 0.5em; }
+
+.badge-colorbg-sm {
+  border: 1px solid #fff;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  vertical-align: middle; }
+
+.badge-colorbg-sm div {
+  width: 18px;
+  height: 18px; }
+
+.data-control-identify-control-block {
+  cursor: pointer;
+  position: absolute;
+  right: -40px;
+  z-index: 9998; }
+
+.data-control-identify-control-block span {
+  margin: 0 3px;
+  z-index: 9999; }
+
+/* Make .svg files in the carousel display properly in older browsers */
+/*.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}*/
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+  /* Hide captions */
+  .carousel-caption {
+    display: none; } }
+
+/* ########################################## */
+/*  LAYOUT END */
+/* ########################################## */
+
+/*# sourceMappingURL=layout.css.map */

@@ -1,0 +1,24 @@
+﻿{
+  "Mail_Settings": {
+    "Host": "smtp.gmail.com",
+    "Port": "587",
+    "UseSSL": false,
+    "UserName": "nrelvao@interlogsolutions.net",
+    "Password": "nrvegas1",
+    "IsHTML": true,
+    "From": "nrelvao@interlogsolutions.net",
+    "TO": "",
+    "CC": "",
+    "BCC": "",
+    "Subjec": "WebFrameworkBase MAIL - {subject}"
+  },
+  "SMS_Settings": {
+    "Host": "myhost",
+    "Port": "",
+    "UserName": "",
+    "Password": "",
+    "FromNumber": "968454672",
+    "TONumber": "",
+    "CCNumber": ""
+  }
+}

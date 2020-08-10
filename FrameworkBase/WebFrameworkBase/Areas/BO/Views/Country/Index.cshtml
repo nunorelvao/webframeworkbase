@@ -1,0 +1,51 @@
+﻿@model WebFrameworkBase.Areas.BO.Models.CountryListViewModel
+@{
+    ViewData["Title"] = "Country List";
+}
+
+<form asp-controller="Country" asp-action="Index" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#content_all" data-ajax-begin="showWaitingScreen(true);" data-ajax-complete="showWaitingScreen(false);" data-ajax-failure="location.reload();">
+    <div id="content_all">
+        <h2>@ViewData["Title"].</h2>
+        <h3>@ViewData["Message"]</h3>
+
+        <div class="row">
+            <div class="col">
+                <a asp-controller="Country" asp-action="RetrieveCountries" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="@ViewBag.RetrieveCountriesTooltip"><llv>Retrieve Countries</llv></a>
+            </div>
+        </div>
+        <hr />
+
+        @if (Model.CountryList.Count() > 0)
+        {
+            @await Html.PartialAsync("~/Views/Shared/NavigationListPartialView.cshtml")
+
+            <table class="table table-condensed table-hover table-bordered table-striped table-dark table-sm">
+                <thead class="bg-primary">
+                    <tr>
+                        <th><span class="oi oi-cog d-block text-center align-middle" title="icon cog" aria-hidden="true"></span></th>
+                        <th scope="col">@Html.DisplayNameFor(m => m.CountryList[0].CountryId)</th>
+                        <th scope="col">@Html.DisplayNameFor(m => m.CountryList[0].CountryName)</th>
+                        <th scope="col">@Html.DisplayNameFor(m => m.CountryList[0].CountryIsoCode)</th>
+                        <th scope="col">@Html.DisplayNameFor(m => m.CountryList[0].CountryIsoCode3)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < Model.CountryList.Count(); i++)
+                    {
+                        <tr>
+                            <td align="center">
+                                <a class="btn btn-primary btn-sm"><span class="oi oi-pencil" title="icon pencil" aria-hidden="true"></span></a>
+                                <a class="btn btn-danger btn-sm"><span class="oi oi-trash" title="icon trash" aria-hidden="true"></span></a>
+                            </td>
+                            <td>@Html.DisplayTextFor(m => m.CountryList[i].CountryId)</td>
+                            <td>@Html.DisplayTextFor(m => m.CountryList[i].CountryName)</td>
+                            <td>@Html.DisplayTextFor(m => m.CountryList[i].CountryIsoCode)</td>
+                            <td>@Html.DisplayTextFor(m => m.CountryList[i].CountryIsoCode3)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        }
+    </div>
+</form>

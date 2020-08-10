@@ -1,0 +1,107 @@
+@model WebFrameworkBase.Areas.BO.Models.PersonViewModel
+@{
+    ViewData["Title"] = "Person Edit";
+}
+<h2>@ViewData["Title"].</h2>
+<h3>@ViewData["Message"]</h3>
+
+<environment include="Development" names="Development">
+    <link rel="stylesheet" href="~/css/bootstrap-colorpicker.css" type="text/css" />
+</environment>
+<environment names="Staging,Production">
+    <link rel="stylesheet" href="~/css/bootstrap-colorpicker.min.css" asp-append-version="true" />
+</environment>
+
+<div class="row">
+    <div class="col">
+        <button type="button" class="btn btn-danger" onclick="history.go(-1)" value="Back"><llv>Back</llv></button>
+    </div>
+</div>
+<hr />
+
+<form asp-area="BO" asp-controller="Person" asp-action="Edit" method="post" class="form-horizontal">
+
+    <input type="hidden" asp-for="PersonId" />
+    <input type="hidden" asp-for="UserId" />
+
+    <div class="container-fluid">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="FirstName" class="col control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="MiddleName" class="col control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="MiddleName" class="form-control" />
+                <span asp-validation-for="MiddleName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="LastName" class="col control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Borndate" class="col control-label "></label>
+            <div class="col-sm-5">
+                @*<input asp-for="Borndate" class="form-control" value='@Model.Borndate' />*@
+                <input type="text" name="Borndate" id="Borndate" value="@Html.DisplayFor(model => model.Borndate)" class="form-control datepicker" />
+
+                <span asp-validation-for="Borndate" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="LanguageId" class="col control-label"></label>
+            <div class="col-sm-5">
+                <select asp-for="LanguageId" asp-items="@Model.LanguagesSelectItems" class="list-group-sm form-control"></select>
+                <span asp-validation-for="LanguageId" class="text-danger"></span>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label asp-for="UserColorBG" class="col control-label "></label>
+            <div class="col-sm-5 input-group" id="usercolorbg-minpick">
+
+                <input asp-for="UserColorBG" id="usercolorbg-pick" class="form-control input-lg" />
+
+
+                <span class="input-group-append ">
+                    <span class="input-group-text colorpicker-input-addon"><i></i></span>
+                </span>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-5">
+                <button type="submit" id="btnSavePerson" class="btn btn-primary" data-toggle="modal" data-target="#waitModal"><llv>Save</llv></button>
+            </div>
+        </div>
+    </div>
+
+
+    @section scripts{
+        <script type="text/javascript">
+
+            activateDatePicker();
+            activateColorPicker();
+
+
+        </script>
+
+        <environment include="Development" names="Development">
+            <script src="~/js/bootstrap-colorpicker.js"></script>
+        </environment>
+        <environment names="Staging,Production">
+            <script src="~/js/bootstrap-colorpicker.min.js" asp-append-version="true"></script>
+        </environment>
+    }
+</form>

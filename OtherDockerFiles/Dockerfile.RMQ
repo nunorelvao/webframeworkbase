@@ -1,0 +1,7 @@
+FROM rabbitmq:3-management
+#ENV RABBITMQ_DEFAULT_USER=vuser
+#ENV RABBITMQ_DEFAULT_PASS=[vuser passowrd]
+LABEL hostname=rabbitbqdocker
+
+
+EXPOSE 4369 5671 5672 25672

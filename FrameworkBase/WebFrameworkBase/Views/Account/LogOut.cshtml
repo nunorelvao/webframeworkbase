@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Logout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2><llv>Logout</llv></h2>
+
+<form asp-controller="Home" asp-action="Index" method="post" class="form-horizontal">
+
+    <div class="container-fluid">
+
+        <div class="form-text">
+            <label class="col-md control-label">You have been logged out.</label>
+        </div>
+
+        <div class="form-text">
+            <div class="col-md col-md-10">
+                <button type="submit" class="btn btn-primary">HOME</button>
+            </div>
+        </div>
+    </div>
+</form>

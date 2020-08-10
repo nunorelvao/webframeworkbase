@@ -1,0 +1,14 @@
+C:\Projects\frameworkbase\Microservices\WorldCountryDataMicroService\bin\Debug\netcoreapp2.2\WorldCountryDataMicroService.deps.json
+C:\Projects\frameworkbase\Microservices\WorldCountryDataMicroService\bin\Debug\netcoreapp2.2\WorldCountryDataMicroService.runtimeconfig.json
+C:\Projects\frameworkbase\Microservices\WorldCountryDataMicroService\bin\Debug\netcoreapp2.2\WorldCountryDataMicroService.runtimeconfig.dev.json
+C:\Projects\frameworkbase\Microservices\WorldCountryDataMicroService\bin\Debug\netcoreapp2.2\WorldCountryDataMicroService.dll
+C:\Projects\frameworkbase\Microservices\WorldCountryDataMicroService\bin\Debug\netcoreapp2.2\WorldCountryDataMicroService.pdb
+C:\Projects\frameworkbase\Microservices\WorldCountryDataMicroService\obj\Debug\netcoreapp2.2\WorldCountryDataMicroService.csprojAssemblyReference.cache
+C:\Projects\frameworkbase\Microservices\WorldCountryDataMicroService\obj\Debug\netcoreapp2.2\WorldCountryDataMicroService.csproj.CoreCompileInputs.cache
+C:\Projects\frameworkbase\Microservices\WorldCountryDataMicroService\obj\Debug\netcoreapp2.2\WorldCountryDataMicroService.RazorAssemblyInfo.cache
+C:\Projects\frameworkbase\Microservices\WorldCountryDataMicroService\obj\Debug\netcoreapp2.2\WorldCountryDataMicroService.RazorAssemblyInfo.cs
+C:\Projects\frameworkbase\Microservices\WorldCountryDataMicroService\obj\Debug\netcoreapp2.2\WorldCountryDataMicroService.AssemblyInfoInputs.cache
+C:\Projects\frameworkbase\Microservices\WorldCountryDataMicroService\obj\Debug\netcoreapp2.2\WorldCountryDataMicroService.AssemblyInfo.cs
+C:\Projects\frameworkbase\Microservices\WorldCountryDataMicroService\obj\Debug\netcoreapp2.2\WorldCountryDataMicroService.RazorTargetAssemblyInfo.cache
+C:\Projects\frameworkbase\Microservices\WorldCountryDataMicroService\obj\Debug\netcoreapp2.2\WorldCountryDataMicroService.dll
+C:\Projects\frameworkbase\Microservices\WorldCountryDataMicroService\obj\Debug\netcoreapp2.2\WorldCountryDataMicroService.pdb

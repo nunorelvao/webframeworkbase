@@ -1,0 +1,27 @@
+﻿@model WebFrameworkBase.Areas.BO.Models.CountryRetrieveViewModel
+
+@{
+    ViewData["Title"] = "Retrieve Countries";
+}
+<h2>@ViewData["Title"].</h2>
+<h3>@ViewData["Message"]</h3>
+
+<form asp-area="BO" asp-controller="Country" asp-action="RetrieveCountries" method="post" class="form-horizontal">
+
+    <div class="container-fluid">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="ServiceURL" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ServiceURL" class="form-control" />
+                <span asp-validation-for="ServiceURL" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <button type="submit" id="btnRetrieveCountries" class="btn btn-primary" data-toggle="modal" data-target="#waitModal">Get Countries</button>
+            </div>
+        </div>
+    </div>
+</form>

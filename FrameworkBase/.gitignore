@@ -1,0 +1,7 @@
+wwwroot
+node_modules
+bin
+obj
+LOGS
+/.vs
+publish

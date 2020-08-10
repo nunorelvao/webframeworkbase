@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "PrivatePolicy";
+}
+
+<h2>@ViewData["Title"].</h2>
+<h3>@ViewData["Message"]</h3>
+
+<p> FROM CONTROLLER: @ViewData["MessageLocalized"]</p>
+
+<p> DIRECTLY FROM TAG HELPER: <button id="btnd"><llv>hello <llv>world</llv></llv></button></p>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

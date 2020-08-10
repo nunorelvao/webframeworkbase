@@ -1,0 +1,23 @@
+﻿@{ if (@User.Identity.IsAuthenticated)
+    {
+        <div class="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarLoginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                @{
+                    var fbprofilepicsrc = @User.Claims.FirstOrDefault(c => c.Type == "FacebookProfilePic")?.Value;
+                    if (fbprofilepicsrc != null)
+                    {
+                        <img src="@fbprofilepicsrc" alt="facebookpic" style="width:30px; height:30px;" />
+                    }
+                }
+                @User.Identity.Name
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarLoginDropdown">
+                <li class="divider"></li>
+                <li class="dropdown-item">
+                    <a class="nav-link text-danger" asp-area="" asp-controller="Account" asp-action="LogOut"><llv>LogOut</llv></a>
+                </li>
+            </ul>
+        </div>
+    }
+}

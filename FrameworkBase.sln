@@ -1,0 +1,91 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFrameworkBase", "FrameworkBase\WebFrameworkBase\WebFrameworkBase.csproj", "{36EA4284-5779-4D6A-9657-76897074624E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameworkBaseData", "FrameworkBase\FrameworkBaseData\FrameworkBaseData.csproj", "{4D468C88-7BBD-4BBB-91CE-974B43D3CA87}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameworkBaseRepo", "FrameworkBase\FrameworkBaseRepo\FrameworkBaseRepo.csproj", "{1212F19C-69E5-4388-A06D-31C839FB2E0A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameworkBaseService", "FrameworkBase\FrameworkBaseService\FrameworkBaseService.csproj", "{9DA257CF-EAB8-4936-A5A6-F4B5867B3A85}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{14E8DE2D-1722-4F69-8350-28CF2CCBABAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{88F57FAA-7CE3-423B-B7D3-F5169F06BEF4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldCountryDataMicroService", "Microservices\WorldCountryDataMicroService\WorldCountryDataMicroService.csproj", "{C7B4B4C5-34F9-499F-9FC0-957AEA6CE0DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OtherDockerFiles", "OtherDockerFiles", "{D12A3E2B-FEB2-4A08-B48C-B9481417CCE7}"
+	ProjectSection(SolutionItems) = preProject
+		OtherDockerFiles\DockerFile.DB = OtherDockerFiles\DockerFile.DB
+		OtherDockerFiles\Dockerfile.RMQ = OtherDockerFiles\Dockerfile.RMQ
+		OtherDockerFiles\SQLentrypoint.sh = OtherDockerFiles\SQLentrypoint.sh
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B06D2BFB-3A4F-488E-BED5-19EC21799EB6}"
+	ProjectSection(SolutionItems) = preProject
+		DOCKER_COMMANDS.txt = DOCKER_COMMANDS.txt
+		README.txt = README.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrameworkBase", "FrameworkBase", "{677C45D5-D1F1-45C5-9D99-F4D6DF0D2982}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Other", "Other", "{E94FBF90-967D-4FB0-A5A0-3569C945440B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMQListener", "RabbitMQListener", "{ADFF3544-36AD-40F3-AEDE-BFA9060FB609}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQListener", "Other\RabbitMQListener\RabbitMQListener\RabbitMQListener.csproj", "{71BD3F46-3ED9-4B1F-860B-2D9D26FF2F93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36EA4284-5779-4D6A-9657-76897074624E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36EA4284-5779-4D6A-9657-76897074624E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36EA4284-5779-4D6A-9657-76897074624E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36EA4284-5779-4D6A-9657-76897074624E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D468C88-7BBD-4BBB-91CE-974B43D3CA87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D468C88-7BBD-4BBB-91CE-974B43D3CA87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D468C88-7BBD-4BBB-91CE-974B43D3CA87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D468C88-7BBD-4BBB-91CE-974B43D3CA87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1212F19C-69E5-4388-A06D-31C839FB2E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1212F19C-69E5-4388-A06D-31C839FB2E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1212F19C-69E5-4388-A06D-31C839FB2E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1212F19C-69E5-4388-A06D-31C839FB2E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DA257CF-EAB8-4936-A5A6-F4B5867B3A85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DA257CF-EAB8-4936-A5A6-F4B5867B3A85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DA257CF-EAB8-4936-A5A6-F4B5867B3A85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DA257CF-EAB8-4936-A5A6-F4B5867B3A85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14E8DE2D-1722-4F69-8350-28CF2CCBABAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14E8DE2D-1722-4F69-8350-28CF2CCBABAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14E8DE2D-1722-4F69-8350-28CF2CCBABAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14E8DE2D-1722-4F69-8350-28CF2CCBABAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7B4B4C5-34F9-499F-9FC0-957AEA6CE0DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7B4B4C5-34F9-499F-9FC0-957AEA6CE0DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7B4B4C5-34F9-499F-9FC0-957AEA6CE0DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7B4B4C5-34F9-499F-9FC0-957AEA6CE0DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71BD3F46-3ED9-4B1F-860B-2D9D26FF2F93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71BD3F46-3ED9-4B1F-860B-2D9D26FF2F93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71BD3F46-3ED9-4B1F-860B-2D9D26FF2F93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71BD3F46-3ED9-4B1F-860B-2D9D26FF2F93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{36EA4284-5779-4D6A-9657-76897074624E} = {677C45D5-D1F1-45C5-9D99-F4D6DF0D2982}
+		{4D468C88-7BBD-4BBB-91CE-974B43D3CA87} = {677C45D5-D1F1-45C5-9D99-F4D6DF0D2982}
+		{1212F19C-69E5-4388-A06D-31C839FB2E0A} = {677C45D5-D1F1-45C5-9D99-F4D6DF0D2982}
+		{9DA257CF-EAB8-4936-A5A6-F4B5867B3A85} = {677C45D5-D1F1-45C5-9D99-F4D6DF0D2982}
+		{C7B4B4C5-34F9-499F-9FC0-957AEA6CE0DF} = {88F57FAA-7CE3-423B-B7D3-F5169F06BEF4}
+		{ADFF3544-36AD-40F3-AEDE-BFA9060FB609} = {E94FBF90-967D-4FB0-A5A0-3569C945440B}
+		{71BD3F46-3ED9-4B1F-860B-2D9D26FF2F93} = {ADFF3544-36AD-40F3-AEDE-BFA9060FB609}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0998B40-FE60-46F2-9607-0D5316BA453D}
+	EndGlobalSection
+EndGlobal
